@@ -418,7 +418,7 @@ Looking forward to the next meet!`;
         const body = encodeURIComponent(bodyText);
         
         // Trigger default mail client
-        window.location.href = `mailto:info@redlinecollective.ca?subject=${subject}&body=${body}`;
+        window.location.href = `mailto:redlinecollectiveco@gmail.com?subject=${subject}&body=${body}`;
         
         // Give brief confirmation feedback
         alert(`Opening your email client to send your join request. Thank you, ${name}!`);
