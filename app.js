@@ -398,31 +398,63 @@ document.addEventListener('DOMContentLoaded', () => {
         const email = document.getElementById('form-email').value;
         const message = document.getElementById('form-message').value;
 
-        const subject = encodeURIComponent(`REDLINE Collective Club Join Request - ${name}`);
-        const bodyText = `Hello REDLINE Collective,
+        const submitBtn = joinForm.querySelector('button[type="submit"]');
+        const originalBtnText = submitBtn.innerHTML;
 
-I would like to join the collective and stay updated on meets, cruises, and events in Medicine Hat!
+        // Change button to loading state
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Sending...';
 
-My Details:
-------------------------------------------
-Name: ${name}
-Email: ${email}
-Vehicle: ${vehicle}
+        // -------------------------------------------------------------
+        // Web3Forms Configuration:
+        // Paste your Access Key from web3forms.com between the quotes below
+        // -------------------------------------------------------------
+        const accessKey = "cdd9b7ac-3289-46f5-9d60-362905685b30"; 
 
-About my passion / build:
-${message ? message : 'Not provided.'}
+        const formData = {
+            access_key: accessKey,
+            subject: `New REDLINE Collective Sign-up: ${name}`,
+            from_name: "REDLINE Website Contact Form",
+            name: name,
+            email: email,
+            vehicle: vehicle,
+            message: message || "No message details provided."
+        };
 
-------------------------------------------
-Looking forward to the next meet!`;
-
-        const body = encodeURIComponent(bodyText);
-        
-        // Trigger default mail client
-        window.location.href = `mailto:redlinecollectiveco@gmail.com?subject=${subject}&body=${body}`;
-        
-        // Give brief confirmation feedback
-        alert(`Opening your email client to send your join request. Thank you, ${name}!`);
-        joinForm.reset();
+        // Send API request in the background
+        fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(async (response) => {
+            let json = await response.json();
+            if (response.status == 200) {
+                // Success feedback
+                alert(`Thanks for joining, ${name}! Your request has been sent. We'll email you at ${email} before our next local Medicine Hat meet!`);
+                joinForm.reset();
+            } else {
+                // Handle API error codes
+                console.error("Web3Forms error response:", json);
+                if (accessKey === "YOUR_ACCESS_KEY_HERE") {
+                    alert("Form setup is incomplete! Please replace 'YOUR_ACCESS_KEY_HERE' in app.js with your free access key from web3forms.com to receive submissions.");
+                } else {
+                    alert(json.message || "There was an error sending your submission. Please try again.");
+                }
+            }
+        })
+        .catch(error => {
+            console.error("Network error during form submission:", error);
+            alert("A network error occurred. Please check your internet connection and try again.");
+        })
+        .finally(() => {
+            // Restore button text and state
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnText;
+        });
     });
 
     // ==========================================
