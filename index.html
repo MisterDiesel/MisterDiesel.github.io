@@ -208,25 +208,35 @@
             <div class="store-filters">
                 <button class="filter-btn active" data-filter="all">All Items</button>
                 <button class="filter-btn" data-filter="apparel">Apparel</button>
+                <button class="filter-btn" data-filter="headwear">Headwear</button>
                 <button class="filter-btn" data-filter="decals">Decals</button>
                 <button class="filter-btn" data-filter="accessories">Accessories</button>
             </div>
 
             <!-- Products Grid -->
             <div class="products-grid">
-                <!-- Product 1: Hoodie -->
+
+                <!-- Product: Everyday Cotton Hoodie -->
                 <div class="product-card" data-category="apparel">
                     <div class="product-img-wrapper">
-                        <img src="assets/images/merch_hoodie.jpg" alt="REDLINE Pulse Hoodie" class="product-img">
+                        <img src="assets/images/everyday-cotton-hoody-black.png" alt="REDLINE Everyday Cotton Hoodie" class="product-img" id="img-hoodie-everyday">
                         <span class="product-tag hot">Best Seller</span>
                     </div>
                     <div class="product-info">
-                        <h3 class="product-title">REDLINE Pulse Hoodie</h3>
+                        <h3 class="product-title">Everyday Cotton Hoodie</h3>
                         <p class="product-price">$49.99</p>
-                        <p class="product-desc">Ultra-soft 400GSM heavy cotton fleece. Minimalist embroidered redline chest logo. Made to survive freezing Alberta winters.</p>
-                        <div class="product-options">
-                            <label for="size-hoodie" class="sr-only">Size</label>
-                            <select id="size-hoodie" class="product-size-select">
+                        <p class="product-desc">Heavy-weight cotton fleece pullover with REDLINE branding. Warm, comfortable, and built for Alberta winters.</p>
+                        <div class="product-options variant-group">
+                            <label class="variant-label">Colour:</label>
+                            <div class="variant-swatches">
+                                <button class="swatch active" title="Black" style="background:#1a1a1a;" onclick="swapVariant('img-hoodie-everyday','assets/images/everyday-cotton-hoody-black.png',this)"></button>
+                                <button class="swatch" title="Ash" style="background:#b0afa8;" onclick="swapVariant('img-hoodie-everyday','assets/images/everyday-cotton-hoody-ash.png',this)"></button>
+                                <button class="swatch" title="Oxford" style="background:#6b7280;" onclick="swapVariant('img-hoodie-everyday','assets/images/everyday-cotton-hoody-oxford.png',this)"></button>
+                                <button class="swatch" title="Oat" style="background:#e8dcc8;" onclick="swapVariant('img-hoodie-everyday','assets/images/everyday-cotton-hoody-oat.png',this)"></button>
+                                <button class="swatch" title="CH" style="background:#c8b8a0;" onclick="swapVariant('img-hoodie-everyday','assets/images/everyday-cotton-hoody-CH.png',this)"></button>
+                                <button class="swatch" title="Throwback" style="background:#3d4a5c;" onclick="swapVariant('img-hoodie-everyday','assets/images/everyday-cotton-throwback-hoody.png',this)"></button>
+                            </div>
+                            <select id="size-hoodie-everyday" class="product-size-select mt-2">
                                 <option value="S">Small</option>
                                 <option value="M" selected>Medium</option>
                                 <option value="L">Large</option>
@@ -234,18 +244,280 @@
                                 <option value="2XL">2X-Large</option>
                             </select>
                         </div>
-                        <button class="btn btn-primary add-to-cart-btn" 
-                                data-id="hoodie-pulse" 
-                                data-name="REDLINE Pulse Hoodie" 
-                                data-price="49.99" 
-                                data-img="assets/images/merch_hoodie.jpg"
+                        <button class="btn btn-primary add-to-cart-btn"
+                                data-id="hoodie-everyday"
+                                data-name="Everyday Cotton Hoodie"
+                                data-price="49.99"
+                                data-img="assets/images/everyday-cotton-hoody-black.png"
                                 data-has-size="true">
                             Add to Cart
                         </button>
                     </div>
                 </div>
 
-                <!-- Product 2: Windshield Decal -->
+                <!-- Product: Softstyle Cotton Tee -->
+                <div class="product-card" data-category="apparel">
+                    <div class="product-img-wrapper">
+                        <img src="assets/images/softstyle-cotton-tee-black.png" alt="REDLINE Softstyle Cotton Tee" class="product-img" id="img-tee-softstyle">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Softstyle Cotton Tee</h3>
+                        <p class="product-price">$29.99</p>
+                        <p class="product-desc">Lightweight, breathable cotton tee with REDLINE graphics. The everyday staple for the car enthusiast.</p>
+                        <div class="product-options variant-group">
+                            <label class="variant-label">Colour:</label>
+                            <div class="variant-swatches">
+                                <button class="swatch active" title="Black" style="background:#1a1a1a;" onclick="swapVariant('img-tee-softstyle','assets/images/softstyle-cotton-tee-black.png',this)"></button>
+                                <button class="swatch" title="Oxford" style="background:#6b7280;" onclick="swapVariant('img-tee-softstyle','assets/images/softstyle-cotton-tee-oxford.png',this)"></button>
+                                <button class="swatch" title="Heather Grey" style="background:#9ca3af;" onclick="swapVariant('img-tee-softstyle','assets/images/softstyle-cotton-tee-HG.png',this)"></button>
+                                <button class="swatch" title="Off White" style="background:#f5f0e8;" onclick="swapVariant('img-tee-softstyle','assets/images/softstyle-cotton-tee-OW.png',this)"></button>
+                            </div>
+                            <select id="size-tee-softstyle" class="product-size-select mt-2">
+                                <option value="S">Small</option>
+                                <option value="M" selected>Medium</option>
+                                <option value="L">Large</option>
+                                <option value="XL">X-Large</option>
+                                <option value="2XL">2X-Large</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary add-to-cart-btn"
+                                data-id="tee-softstyle"
+                                data-name="Softstyle Cotton Tee"
+                                data-price="29.99"
+                                data-img="assets/images/softstyle-cotton-tee-black.png"
+                                data-has-size="true">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product: Cotton Throwback Tee -->
+                <div class="product-card" data-category="apparel">
+                    <div class="product-img-wrapper">
+                        <img src="assets/images/cotton-throwback-tee.png" alt="REDLINE Cotton Throwback Tee" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Cotton Throwback Tee</h3>
+                        <p class="product-price">$29.99</p>
+                        <p class="product-desc">Vintage-inspired cut with a relaxed fit. Features a classic REDLINE throwback design on premium cotton.</p>
+                        <div class="product-options">
+                            <select id="size-tee-throwback" class="product-size-select">
+                                <option value="S">Small</option>
+                                <option value="M" selected>Medium</option>
+                                <option value="L">Large</option>
+                                <option value="XL">X-Large</option>
+                                <option value="2XL">2X-Large</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary add-to-cart-btn"
+                                data-id="tee-throwback"
+                                data-name="Cotton Throwback Tee"
+                                data-price="29.99"
+                                data-img="assets/images/cotton-throwback-tee.png"
+                                data-has-size="true">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product: Element Open-Bottom Sweats -->
+                <div class="product-card" data-category="apparel">
+                    <div class="product-img-wrapper">
+                        <img src="assets/images/element-open-bottom-sweats-black.png" alt="REDLINE Element Open-Bottom Sweats" class="product-img" id="img-sweats-element">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Element Open-Bottom Sweats</h3>
+                        <p class="product-price">$44.99</p>
+                        <p class="product-desc">Relaxed open-bottom sweatpants with REDLINE detailing. Comfortable for meets, cruises, and daily wear.</p>
+                        <div class="product-options variant-group">
+                            <label class="variant-label">Colour:</label>
+                            <div class="variant-swatches">
+                                <button class="swatch active" title="Black" style="background:#1a1a1a;" onclick="swapVariant('img-sweats-element','assets/images/element-open-bottom-sweats-black.png',this)"></button>
+                                <button class="swatch" title="Navy" style="background:#1e3a5f;" onclick="swapVariant('img-sweats-element','assets/images/element-open-bottom-sweats-navy.png',this)"></button>
+                                <button class="swatch" title="Oxford" style="background:#6b7280;" onclick="swapVariant('img-sweats-element','assets/images/element-open-bottom-sweats-oxford.png',this)"></button>
+                                <button class="swatch" title="Dusty Rose" style="background:#c9a0a0;" onclick="swapVariant('img-sweats-element','assets/images/element-open-bottom-sweats-dustyrose.png',this)"></button>
+                                <button class="swatch" title="Sahara" style="background:#c4a96a;" onclick="swapVariant('img-sweats-element','assets/images/element-open-bottom-sweats-sahara.png',this)"></button>
+                            </div>
+                            <select id="size-sweats-element" class="product-size-select mt-2">
+                                <option value="S">Small</option>
+                                <option value="M" selected>Medium</option>
+                                <option value="L">Large</option>
+                                <option value="XL">X-Large</option>
+                                <option value="2XL">2X-Large</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary add-to-cart-btn"
+                                data-id="sweats-element"
+                                data-name="Element Open-Bottom Sweats"
+                                data-price="44.99"
+                                data-img="assets/images/element-open-bottom-sweats-black.png"
+                                data-has-size="true">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product: Elastic-Bottom Sweats -->
+                <div class="product-card" data-category="apparel">
+                    <div class="product-img-wrapper">
+                        <img src="assets/images/elastic-bottom-sweats-black.png" alt="REDLINE Elastic-Bottom Sweats" class="product-img" id="img-sweats-elastic">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Elastic-Bottom Sweats</h3>
+                        <p class="product-price">$44.99</p>
+                        <p class="product-desc">Tapered elastic-cuff sweatpants with a clean athletic fit. REDLINE branded for the track-day enthusiast.</p>
+                        <div class="product-options variant-group">
+                            <label class="variant-label">Colour:</label>
+                            <div class="variant-swatches">
+                                <button class="swatch active" title="Black" style="background:#1a1a1a;" onclick="swapVariant('img-sweats-elastic','assets/images/elastic-bottom-sweats-black.png',this)"></button>
+                                <button class="swatch" title="Navy" style="background:#1e3a5f;" onclick="swapVariant('img-sweats-elastic','assets/images/elastic-bottom-sweats-navy.png',this)"></button>
+                            </div>
+                            <select id="size-sweats-elastic" class="product-size-select mt-2">
+                                <option value="S">Small</option>
+                                <option value="M" selected>Medium</option>
+                                <option value="L">Large</option>
+                                <option value="XL">X-Large</option>
+                                <option value="2XL">2X-Large</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary add-to-cart-btn"
+                                data-id="sweats-elastic"
+                                data-name="Elastic-Bottom Sweats"
+                                data-price="44.99"
+                                data-img="assets/images/elastic-bottom-sweats-black.png"
+                                data-has-size="true">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product: REDLINE Mesh Snapback -->
+                <div class="product-card" data-category="headwear">
+                    <div class="product-img-wrapper">
+                        <img src="assets/images/redline-mesh-snapback(black).png" alt="REDLINE Mesh Snapback Cap" class="product-img" id="img-cap-redline">
+                        <span class="product-tag hot">New</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">REDLINE Mesh Snapback</h3>
+                        <p class="product-price">$34.99</p>
+                        <p class="product-desc">Structured 6-panel snapback with embroidered REDLINE branding and breathable mesh back. One size fits all.</p>
+                        <div class="product-options variant-group">
+                            <label class="variant-label">Colour:</label>
+                            <div class="variant-swatches">
+                                <button class="swatch active" title="Black" style="background:#1a1a1a;" onclick="swapVariant('img-cap-redline','assets/images/redline-mesh-snapback(black).png',this)"></button>
+                                <button class="swatch" title="White" style="background:#f5f5f5; border:1px solid #ccc;" onclick="swapVariant('img-cap-redline','assets/images/redline-mesh-snapback(white).png',this)"></button>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary add-to-cart-btn"
+                                data-id="cap-redline-snapback"
+                                data-name="REDLINE Mesh Snapback"
+                                data-price="34.99"
+                                data-img="assets/images/redline-mesh-snapback(black).png"
+                                data-has-size="false">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product: Racing Mesh Snapback -->
+                <div class="product-card" data-category="headwear">
+                    <div class="product-img-wrapper">
+                        <img src="assets/images/racing-mesh-snapback(black).png" alt="REDLINE Racing Mesh Snapback Cap" class="product-img" id="img-cap-racing">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Racing Mesh Snapback</h3>
+                        <p class="product-price">$34.99</p>
+                        <p class="product-desc">Racing-inspired snapback with a bold REDLINE front panel and perforated mesh back. A must-have at the meets.</p>
+                        <div class="product-options variant-group">
+                            <label class="variant-label">Colour:</label>
+                            <div class="variant-swatches">
+                                <button class="swatch active" title="Black" style="background:#1a1a1a;" onclick="swapVariant('img-cap-racing','assets/images/racing-mesh-snapback(black).png',this)"></button>
+                                <button class="swatch" title="White" style="background:#f5f5f5; border:1px solid #ccc;" onclick="swapVariant('img-cap-racing','assets/images/racing-mesh-snapback(white).png',this)"></button>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary add-to-cart-btn"
+                                data-id="cap-racing-snapback"
+                                data-name="Racing Mesh Snapback"
+                                data-price="34.99"
+                                data-img="assets/images/racing-mesh-snapback(black).png"
+                                data-has-size="false">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product: REDLINE Travel Mugs -->
+                <div class="product-card" data-category="accessories">
+                    <div class="product-img-wrapper">
+                        <img src="assets/images/redline-travel_mugs-assorted.png" alt="REDLINE Travel Mugs" class="product-img">
+                        <span class="product-tag hot">New</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">REDLINE Travel Mug</h3>
+                        <p class="product-price">$24.99</p>
+                        <p class="product-desc">Double-walled insulated travel mug with REDLINE branding. Keeps your coffee hot at early-morning meet-ups. Assorted colours available.</p>
+                        <div class="product-options">
+                            <span class="no-options-tag">Assorted Colours</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart-btn"
+                                data-id="accessory-mug"
+                                data-name="REDLINE Travel Mug"
+                                data-price="24.99"
+                                data-img="assets/images/redline-travel_mugs-assorted.png"
+                                data-has-size="false">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product: Real REDLINE Keychain -->
+                <div class="product-card" data-category="accessories">
+                    <div class="product-img-wrapper">
+                        <img src="assets/images/REDLINE-Keychain.jpg" alt="REDLINE Keychain" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">REDLINE Jet Tag Keychain</h3>
+                        <p class="product-price">$9.99</p>
+                        <p class="product-desc">Double-sided embroidered fabric jet tag keychain with stitched borders and REDLINE branding. Perfect for your car keys.</p>
+                        <div class="product-options">
+                            <span class="no-options-tag">One Size</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart-btn"
+                                data-id="keychain-jettag"
+                                data-name="REDLINE Jet Tag Keychain"
+                                data-price="9.99"
+                                data-img="assets/images/REDLINE-Keychain.jpg"
+                                data-has-size="false">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product: RC x Puro Collab -->
+                <div class="product-card" data-category="accessories">
+                    <div class="product-img-wrapper">
+                        <img src="assets/images/RCxPuro.png" alt="REDLINE x Puro Collaboration" class="product-img">
+                        <span class="product-tag" style="background: linear-gradient(135deg,#ff3b30,#ff7b00);">Collab</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">RC × Puro Collaboration</h3>
+                        <p class="product-price">$19.99</p>
+                        <p class="product-desc">A special collaboration between REDLINE Collective and Puro. Limited run — grab one before they're gone.</p>
+                        <div class="product-options">
+                            <span class="no-options-tag">Limited Edition</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart-btn"
+                                data-id="collab-rcpuro"
+                                data-name="RC × Puro Collaboration"
+                                data-price="19.99"
+                                data-img="assets/images/RCxPuro.png"
+                                data-has-size="false">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product: Windshield Decal (kept) -->
                 <div class="product-card" data-category="decals">
                     <div class="product-img-wrapper">
                         <img src="assets/images/merch_decal.jpg" alt="REDLINE Windshield Banner Decal" class="product-img">
@@ -257,10 +529,10 @@
                         <div class="product-options">
                             <span class="no-options-tag">Universal Fit</span>
                         </div>
-                        <button class="btn btn-primary add-to-cart-btn" 
-                                data-id="decal-windshield" 
-                                data-name="REDLINE Windshield Banner" 
-                                data-price="19.99" 
+                        <button class="btn btn-primary add-to-cart-btn"
+                                data-id="decal-windshield"
+                                data-name="REDLINE Windshield Banner"
+                                data-price="19.99"
                                 data-img="assets/images/merch_decal.jpg"
                                 data-has-size="false">
                             Add to Cart
@@ -268,60 +540,11 @@
                     </div>
                 </div>
 
-                <!-- Product 3: T-Shirt -->
-                <div class="product-card" data-category="apparel">
-                    <div class="product-img-wrapper">
-                        <img src="assets/images/merch_tshirt.jpg" alt="RPM Tachometer Graphic Tee" class="product-img">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title">RPM Tachometer Graphic Tee</h3>
-                        <p class="product-price">$24.99</p>
-                        <p class="product-desc">100% ring-spun organic cotton. Features a custom redline tachometer graphic on charcoal grey. Lightweight and breathable.</p>
-                        <div class="product-options">
-                            <label for="size-tshirt" class="sr-only">Size</label>
-                            <select id="size-tshirt" class="product-size-select">
-                                <option value="S">Small</option>
-                                <option value="M" selected>Medium</option>
-                                <option value="L">Large</option>
-                                <option value="XL">X-Large</option>
-                            </select>
-                        </div>
-                        <button class="btn btn-primary add-to-cart-btn" 
-                                data-id="tshirt-rpm" 
-                                data-name="RPM Tachometer Tee" 
-                                data-price="24.99" 
-                                data-img="assets/images/merch_tshirt.jpg"
-                                data-has-size="true">
-                            Add to Cart
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Product 4: Keychain -->
-                <div class="product-card" data-category="accessories">
-                    <div class="product-img-wrapper">
-                        <img src="assets/images/merch_keychain.jpg" alt="REDLINE Embroidered Jet Tag" class="product-img">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title">REDLINE Jet Tag Keychain</h3>
-                        <p class="product-price">$9.99</p>
-                        <p class="product-desc">Double-sided, heavy-duty embroidered fabric keychain with stitched borders. Classic red and white lettering. Perfect for your car keys.</p>
-                        <div class="product-options">
-                            <span class="no-options-tag">One Size</span>
-                        </div>
-                        <button class="btn btn-primary add-to-cart-btn" 
-                                data-id="keychain-jettag" 
-                                data-name="REDLINE Jet Tag Keychain" 
-                                data-price="9.99" 
-                                data-img="assets/images/merch_keychain.jpg"
-                                data-has-size="false">
-                            Add to Cart
-                        </button>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
+
+
 
     <!-- Join / Newsletter & Contact Section -->
     <section id="contact" class="section-padding bg-darker">

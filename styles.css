@@ -1019,6 +1019,51 @@ ul {
     display: inline-block;
 }
 
+/* Colour Variant Swatches */
+.variant-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.variant-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.variant-swatches {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.swatch {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition-fast);
+    border: 2px solid transparent;
+    outline: none;
+    position: relative;
+}
+
+.swatch:hover {
+    transform: scale(1.2);
+}
+
+.swatch.active {
+    border-color: var(--accent-red);
+    box-shadow: 0 0 0 2px var(--bg-secondary), 0 0 0 4px var(--accent-red);
+}
+
+.mt-2 {
+    margin-top: 8px;
+}
+
 .add-to-cart-btn {
     width: 100%;
 }

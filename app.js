@@ -123,6 +123,30 @@ document.addEventListener('DOMContentLoaded', () => {
         alert(`Awesome! You have RSVP'd for "${eventName}". We've added you to the event roster. See you there!`);
     };
 
+    // Colour variant image swapper for product cards
+    window.swapVariant = (imgId, newSrc, clickedSwatch) => {
+        // Swap the displayed image
+        const imgEl = document.getElementById(imgId);
+        if (imgEl) {
+            imgEl.src = newSrc;
+        }
+
+        // Update the cart button's data-img so the correct variant goes into cart
+        const card = clickedSwatch.closest('.product-card');
+        if (card) {
+            const cartBtn = card.querySelector('.add-to-cart-btn');
+            if (cartBtn) {
+                cartBtn.setAttribute('data-img', newSrc);
+            }
+        }
+
+        // Highlight the active swatch
+        const allSwatches = clickedSwatch.closest('.variant-swatches').querySelectorAll('.swatch');
+        allSwatches.forEach(s => s.classList.remove('active'));
+        clickedSwatch.classList.add('active');
+    };
+
+
     // ==========================================
     // 6. STORE CATALOG FILTERING
     // ==========================================
