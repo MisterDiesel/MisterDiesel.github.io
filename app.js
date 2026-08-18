@@ -394,10 +394,34 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         
         const name = document.getElementById('form-name').value;
-        const email = document.getElementById('form-email').value;
         const vehicle = document.getElementById('form-vehicle').value;
+        const email = document.getElementById('form-email').value;
+        const message = document.getElementById('form-message').value;
 
-        alert(`Thanks for joining, ${name}! Your ${vehicle} is officially registered on our club notification list. We'll email you at ${email} before our next local Medicine Hat meet!`);
+        const subject = encodeURIComponent(`REDLINE Collective Club Join Request - ${name}`);
+        const bodyText = `Hello REDLINE Collective,
+
+I would like to join the collective and stay updated on meets, cruises, and events in Medicine Hat!
+
+My Details:
+------------------------------------------
+Name: ${name}
+Email: ${email}
+Vehicle: ${vehicle}
+
+About my passion / build:
+${message ? message : 'Not provided.'}
+
+------------------------------------------
+Looking forward to the next meet!`;
+
+        const body = encodeURIComponent(bodyText);
+        
+        // Trigger default mail client
+        window.location.href = `mailto:info@redlinecollective.ca?subject=${subject}&body=${body}`;
+        
+        // Give brief confirmation feedback
+        alert(`Opening your email client to send your join request. Thank you, ${name}!`);
         joinForm.reset();
     });
 
