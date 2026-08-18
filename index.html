@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REDLINE Collective | Medicine Hat Car Club & Premium Merch</title>
+    <meta name="description" content="An inclusive car club in Medicine Hat, Alberta. All vehicles welcome. Affordable, high-quality merchandise to support our community. Join the collective.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@600;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Top Progress Bar / Scroll Indicator -->
+    <div id="scroll-indicator"></div>
+
+    <!-- Navigation Header -->
+    <header id="main-header">
+        <div class="nav-container">
+            <a href="#" class="brand-logo">
+                <span class="red-accent">RED</span>LINE<span class="sub-brand">COLLECTIVE</span>
+            </a>
+            
+            <nav id="navbar">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#events" class="nav-link">Events</a>
+                <a href="#store" class="nav-link">Merch</a>
+                <a href="#contact" class="nav-link">Join Us</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="cart-toggle-btn" class="nav-icon-btn" aria-label="Shopping Cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-badge" class="badge">0</span>
+                </button>
+                <button id="mobile-menu-btn" class="nav-icon-btn" aria-label="Toggle Navigation Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-nav" class="mobile-nav-drawer">
+        <button id="mobile-nav-close" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+        <div class="mobile-nav-links">
+            <a href="#about" class="mobile-link">About</a>
+            <a href="#events" class="mobile-link">Events</a>
+            <a href="#store" class="mobile-link">Merch</a>
+            <a href="#contact" class="mobile-link">Join Us</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-content">
+            <div class="badge-tag">MEDICINE HAT, AB</div>
+            <h1 class="hero-title animate-pop-in">ANY BUILD. ANY BADGE.<br><span class="glitch-text" data-text="ONE PASSION">ONE PASSION.</span></h1>
+            <p class="hero-subtitle animate-fade-in-up">We are Medicine Hat's all-inclusive car club. Whether you drive a tuned import, a classic cruiser, a lifted rig, or your daily commuter, you have a place at REDLINE. Support the community and gear up with our premium merch.</p>
+            <div class="hero-cta animate-fade-in-up">
+                <a href="#store" class="btn btn-primary btn-glow">Shop Premium Merch</a>
+                <a href="#events" class="btn btn-secondary">Upcoming Meets</a>
+            </div>
+        </div>
+        <a href="#about" class="scroll-down-arrow" aria-label="Scroll Down">
+            <i class="fa-solid fa-chevron-down"></i>
+        </a>
+    </section>
+
+    <!-- About / Philosophy Section -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">WHO WE ARE</span>
+                <h2 class="section-title">The No-Gatekeeping Collective</h2>
+                <div class="accent-line"></div>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-text">
+                    <p class="lead-text">REDLINE Collective was born out of a simple idea: car culture should be about community, not competition or cost.</p>
+                    <p>Too often, car clubs feel exclusive, elitist, or limited to specific vehicle classes. In Medicine Hat, we wanted to break those barriers down. Whether you have a track-prepped build, a project car that's half-finished, or a bone-stock hatchback that gets you to work, you are a car enthusiast. That's all that matters to us.</p>
+                    <p>To fund our community meets, cruises, and events, we design and produce high-quality, durable, and affordable apparel and decals. Every purchase goes directly back into hosting free public events, booking meet locations, and keeping the collective rolling.</p>
+                    
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fa-solid fa-users"></i></div>
+                            <div class="feature-info">
+                                <h3>All Vehicles Welcome</h3>
+                                <p>No application screens or vehicle vetting. If you love cars, you are in.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fa-solid fa-shirt"></i></div>
+                            <div class="feature-info">
+                                <h3>High-Quality, Low-Cost Merch</h3>
+                                <p>Sourced from high-grade materials and priced fairly, so you look great without breaking the bank.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fa-solid fa-heart-circle-check"></i></div>
+                            <div class="feature-info">
+                                <h3>100% Community Funded</h3>
+                                <p>Every dollar generated goes right back into supporting local meetups, photo sessions, and cruises.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-visual">
+                    <div class="visual-card">
+                        <div class="card-glow"></div>
+                        <div class="card-content">
+                            <span class="card-number">01</span>
+                            <h3>The Redline Pledge</h3>
+                            <p>"Respect the build, respect the driver, respect the community. Keep the meets clean, keep the streets safe, and leave the ego at home."</p>
+                            <div class="pledge-author">— REDLINE Collective Founders</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="section-padding bg-darker">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">JOIN THE CRUISE</span>
+                <h2 class="section-title">Upcoming Meets & Events</h2>
+                <div class="accent-line"></div>
+            </div>
+
+            <div class="events-grid">
+                <!-- Event 1 -->
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">22</span>
+                        <span class="month">AUG</span>
+                    </div>
+                    <div class="event-details">
+                        <span class="event-type">WEEKLY MEET</span>
+                        <h3>Saturday Night Coffee & Cars</h3>
+                        <p class="event-meta"><i class="fa-solid fa-location-dot"></i> Medicine Hat Mall Lot (Near Tim Hortons)</p>
+                        <p class="event-meta"><i class="fa-solid fa-clock"></i> 7:00 PM - 10:00 PM</p>
+                        <p class="event-desc">Grab a brew, roll in with whatever you drive, and chat with fellow enthusiasts. Static, relaxed meet. Respect the lot: no revving or burnouts.</p>
+                        <button class="btn btn-sm btn-secondary event-btn" onclick="rsvpEvent('Saturday Night Coffee & Cars')">
+                            <span class="btn-text">I'm Going</span> <i class="fa-solid fa-check"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Event 2 -->
+                <div class="event-card highlighted">
+                    <div class="event-date accent-bg">
+                        <span class="day">06</span>
+                        <span class="month">SEP</span>
+                    </div>
+                    <div class="event-details">
+                        <span class="event-type special">CRUISE EVENT</span>
+                        <h3>Cypress Hills Sunset Cruise</h3>
+                        <p class="event-meta"><i class="fa-solid fa-location-dot"></i> Meeting point: Husky on Trans-Canada Hwy</p>
+                        <p class="event-meta"><i class="fa-solid fa-clock"></i> 4:30 PM Departure</p>
+                        <p class="event-desc">Our monthly group drive. We'll cruise down to Cypress Hills Interprovincial Park, stop for photos at the lake, and head back under the sunset. All vehicles welcome.</p>
+                        <button class="btn btn-sm btn-primary event-btn btn-glow" onclick="rsvpEvent('Cypress Hills Sunset Cruise')">
+                            <span class="btn-text">RSVP Now</span> <i class="fa-solid fa-calendar-plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Event 3 -->
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">20</span>
+                        <span class="month">SEP</span>
+                    </div>
+                    <div class="event-details">
+                        <span class="event-type">SHOW & SHINE</span>
+                        <h3>REDLINE End-of-Summer Show</h3>
+                        <p class="event-meta"><i class="fa-solid fa-location-dot"></i> Medicine Hat Exhibition & Stampede Park</p>
+                        <p class="event-meta"><i class="fa-solid fa-clock"></i> 11:00 AM - 4:00 PM</p>
+                        <p class="event-desc">Our final big show of the season. Awards for multiple categories (including People's Choice and Cleanest Daily). Merch booth on-site, local food trucks, and music.</p>
+                        <button class="btn btn-sm btn-secondary event-btn" onclick="rsvpEvent('REDLINE End-of-Summer Show')">
+                            <span class="btn-text">I'm Going</span> <i class="fa-solid fa-check"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Merchandise Store Section -->
+    <section id="store" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">SUPPORT THE CLUB</span>
+                <h2 class="section-title">Premium Merchandise</h2>
+                <p class="section-description">High-quality materials, comfortable fits, and clean designs at a fair price. Wear your support.</p>
+                <div class="accent-line"></div>
+            </div>
+
+            <!-- Filter Controls -->
+            <div class="store-filters">
+                <button class="filter-btn active" data-filter="all">All Items</button>
+                <button class="filter-btn" data-filter="apparel">Apparel</button>
+                <button class="filter-btn" data-filter="decals">Decals</button>
+                <button class="filter-btn" data-filter="accessories">Accessories</button>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid">
+                <!-- Product 1: Hoodie -->
+                <div class="product-card" data-category="apparel">
+                    <div class="product-img-wrapper">
+                        <img src="assets/images/merch_hoodie.jpg" alt="REDLINE Pulse Hoodie" class="product-img">
+                        <span class="product-tag hot">Best Seller</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">REDLINE Pulse Hoodie</h3>
+                        <p class="product-price">$49.99</p>
+                        <p class="product-desc">Ultra-soft 400GSM heavy cotton fleece. Minimalist embroidered redline chest logo. Made to survive freezing Alberta winters.</p>
+                        <div class="product-options">
+                            <label for="size-hoodie" class="sr-only">Size</label>
+                            <select id="size-hoodie" class="product-size-select">
+                                <option value="S">Small</option>
+                                <option value="M" selected>Medium</option>
+                                <option value="L">Large</option>
+                                <option value="XL">X-Large</option>
+                                <option value="2XL">2X-Large</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary add-to-cart-btn" 
+                                data-id="hoodie-pulse" 
+                                data-name="REDLINE Pulse Hoodie" 
+                                data-price="49.99" 
+                                data-img="assets/images/merch_hoodie.jpg"
+                                data-has-size="true">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 2: Windshield Decal -->
+                <div class="product-card" data-category="decals">
+                    <div class="product-img-wrapper">
+                        <img src="assets/images/merch_decal.jpg" alt="REDLINE Windshield Banner Decal" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">REDLINE Windshield Banner</h3>
+                        <p class="product-price">$19.99</p>
+                        <p class="product-desc">Premium Oracal 651 matte black vinyl banner with crisp red and white text. Weatherproof, UV-resistant, and fits all makes/models.</p>
+                        <div class="product-options">
+                            <span class="no-options-tag">Universal Fit</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart-btn" 
+                                data-id="decal-windshield" 
+                                data-name="REDLINE Windshield Banner" 
+                                data-price="19.99" 
+                                data-img="assets/images/merch_decal.jpg"
+                                data-has-size="false">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 3: T-Shirt -->
+                <div class="product-card" data-category="apparel">
+                    <div class="product-img-wrapper">
+                        <img src="assets/images/merch_tshirt.jpg" alt="RPM Tachometer Graphic Tee" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">RPM Tachometer Graphic Tee</h3>
+                        <p class="product-price">$24.99</p>
+                        <p class="product-desc">100% ring-spun organic cotton. Features a custom redline tachometer graphic on charcoal grey. Lightweight and breathable.</p>
+                        <div class="product-options">
+                            <label for="size-tshirt" class="sr-only">Size</label>
+                            <select id="size-tshirt" class="product-size-select">
+                                <option value="S">Small</option>
+                                <option value="M" selected>Medium</option>
+                                <option value="L">Large</option>
+                                <option value="XL">X-Large</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary add-to-cart-btn" 
+                                data-id="tshirt-rpm" 
+                                data-name="RPM Tachometer Tee" 
+                                data-price="24.99" 
+                                data-img="assets/images/merch_tshirt.jpg"
+                                data-has-size="true">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 4: Keychain -->
+                <div class="product-card" data-category="accessories">
+                    <div class="product-img-wrapper">
+                        <img src="assets/images/merch_keychain.jpg" alt="REDLINE Embroidered Jet Tag" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">REDLINE Jet Tag Keychain</h3>
+                        <p class="product-price">$9.99</p>
+                        <p class="product-desc">Double-sided, heavy-duty embroidered fabric keychain with stitched borders. Classic red and white lettering. Perfect for your car keys.</p>
+                        <div class="product-options">
+                            <span class="no-options-tag">One Size</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart-btn" 
+                                data-id="keychain-jettag" 
+                                data-name="REDLINE Jet Tag Keychain" 
+                                data-price="9.99" 
+                                data-img="assets/images/merch_keychain.jpg"
+                                data-has-size="false">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join / Newsletter & Contact Section -->
+    <section id="contact" class="section-padding bg-darker">
+        <div class="container">
+            <div class="contact-layout">
+                <div class="contact-info-panel">
+                    <span class="section-subtitle">GET CONNECTED</span>
+                    <h2 class="section-title">Join the Collective</h2>
+                    <p>Want to stay updated on cruises, meets, and merchandise releases? Enter your details to join our email notification list. It's 100% free, and we promise never to spam you.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <h4>Based In</h4>
+                                <p>Medicine Hat, Alberta, Canada</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-brands fa-instagram"></i>
+                            <div>
+                                <h4>Follow Us</h4>
+                                <p><a href="https://instagram.com" target="_blank" rel="noreferrer" class="highlight-link">@RedlineCollectiveMH</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <h4>Business & Collabs</h4>
+                                <p><a href="mailto:info@redlinecollective.ca" class="highlight-link">info@redlinecollective.ca</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-panel">
+                    <form id="join-form" class="theme-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="form-name">First Name</label>
+                                <input type="text" id="form-name" placeholder="John" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-vehicle">Your Ride (Year/Make/Model)</label>
+                                <input type="text" id="form-vehicle" placeholder="e.g. 2018 Subaru BRZ or Stock Civic" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="form-email">Email Address</label>
+                            <input type="email" id="form-email" placeholder="john.doe@email.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="form-message">Tell us about your passion (Optional)</label>
+                            <textarea id="form-message" rows="3" placeholder="What got you into cars? Are you working on any builds?"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-glow w-full">Join Club Mailing List</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="brand-logo">
+                    <span class="red-accent">RED</span>LINE<span class="sub-brand">COLLECTIVE</span>
+                </a>
+                <p>An inclusive car club and premium merch line in Southeastern Alberta. Driven by passion, supported by community.</p>
+                <div class="social-icons">
+                    <a href="https://instagram.com" aria-label="Instagram" target="_blank" rel="noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noreferrer"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://tiktok.com" aria-label="TikTok" target="_blank" rel="noreferrer"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://discord.com" aria-label="Discord" target="_blank" rel="noreferrer"><i class="fa-brands fa-discord"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About Philosophy</a></li>
+                    <li><a href="#events">Upcoming Events</a></li>
+                    <li><a href="#store">Merch Store</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Support & Policies</h4>
+                <ul>
+                    <li><a href="#store">Shipping & Delivery</a></li>
+                    <li><a href="#store">Returns & Exchanges</a></li>
+                    <li><a href="#contact">Mailing List</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-meta">
+                <h4>Medicine Hat local</h4>
+                <p>Support local builds. Drive responsibly. Leave the meets clean. Keep Medicine Hat's car culture thriving.</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container bottom-bar">
+                <p>&copy; 2026 REDLINE Collective. All Rights Reserved.</p>
+                <p>Created for car enthusiasts across Alberta.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Drawer (Right Slide-over) -->
+    <div id="cart-drawer" class="cart-drawer">
+        <div class="cart-drawer-header">
+            <h3>Your Gear Bag (<span id="cart-drawer-count">0</span>)</h3>
+            <button id="cart-close-btn" class="close-btn" aria-label="Close Cart"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        
+        <div class="cart-drawer-body">
+            <!-- Empty Cart State -->
+            <div id="cart-empty" class="cart-empty-state">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <p>Your gear bag is empty!</p>
+                <a href="#store" id="start-shopping-btn" class="btn btn-secondary btn-sm">Explore Store</a>
+            </div>
+
+            <!-- Cart Items List -->
+            <div id="cart-items-container" class="cart-items-list">
+                <!-- Dynamically populated via JS -->
+            </div>
+        </div>
+
+        <div class="cart-drawer-footer">
+            <div class="cart-totals">
+                <span>Subtotal</span>
+                <span id="cart-subtotal">$0.00</span>
+            </div>
+            <p class="shipping-notice">Taxes & shipping calculated at checkout</p>
+            <button id="checkout-btn" class="btn btn-primary btn-glow w-full" disabled>Proceed to Checkout</button>
+        </div>
+    </div>
+    
+    <!-- Cart Overlay Backdrop -->
+    <div id="cart-overlay" class="drawer-overlay"></div>
+
+    <!-- Checkout Modal -->
+    <div id="checkout-modal" class="modal">
+        <div class="modal-content">
+            <button id="modal-close-btn" class="modal-close"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header">
+                <h2>Secure Checkout Simulation</h2>
+                <p>Simulating your order with REDLINE Collective</p>
+            </div>
+            <div class="modal-body">
+                <div class="checkout-split">
+                    <!-- Checkout Form -->
+                    <div class="checkout-form-container">
+                        <form id="checkout-form" class="theme-form">
+                            <h3>1. Contact & Shipping</h3>
+                            <div class="form-group">
+                                <label for="checkout-email">Email Address</label>
+                                <input type="email" id="checkout-email" required placeholder="name@domain.com">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="checkout-first-name">First Name</label>
+                                    <input type="text" id="checkout-first-name" required placeholder="John">
+                                </div>
+                                <div class="form-group">
+                                    <label for="checkout-last-name">Last Name</label>
+                                    <input type="text" id="checkout-last-name" required placeholder="Doe">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="checkout-address">Shipping Address</label>
+                                <input type="text" id="checkout-address" required placeholder="123 Main St SE">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="checkout-city">City</label>
+                                    <input type="text" id="checkout-city" value="Medicine Hat" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="checkout-province">Province</label>
+                                    <input type="text" id="checkout-province" value="Alberta" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="checkout-postal">Postal Code</label>
+                                    <input type="text" id="checkout-postal" placeholder="T1A 0A1" required>
+                                </div>
+                            </div>
+
+                            <h3 class="mt-4">2. Simulated Payment</h3>
+                            <p class="simulation-note"><i class="fa-solid fa-circle-info"></i> This is a simulated checkout. Payment details are randomized for testing purposes.</p>
+                            <div class="form-group">
+                                <label for="checkout-card">Credit Card Number</label>
+                                <div class="card-input-wrapper">
+                                    <input type="text" id="checkout-card" value="4111 2222 3333 4444" placeholder="4111 2222 3333 4444" required disabled>
+                                    <i class="fa-brands fa-cc-visa"></i>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="checkout-exp">Expiry</label>
+                                    <input type="text" id="checkout-exp" value="12/29" required disabled>
+                                </div>
+                                <div class="form-group">
+                                    <label for="checkout-cvc">CVC</label>
+                                    <input type="text" id="checkout-cvc" value="123" required disabled>
+                                </div>
+                            </div>
+
+                            <button type="submit" id="submit-order-btn" class="btn btn-primary btn-glow w-full mt-4">Place Simulated Order</button>
+                        </form>
+                    </div>
+
+                    <!-- Order Summary Side Panel -->
+                    <div class="checkout-summary-container">
+                        <h3>Order Summary</h3>
+                        <div id="checkout-summary-items" class="summary-items-list">
+                            <!-- Populated via JS -->
+                        </div>
+                        <div class="summary-costs">
+                            <div class="summary-line">
+                                <span>Subtotal</span>
+                                <span id="summary-subtotal">$0.00</span>
+                            </div>
+                            <div class="summary-line">
+                                <span>Shipping (Local Pickup/Standard)</span>
+                                <span id="summary-shipping">FREE</span>
+                            </div>
+                            <div class="summary-line total-line">
+                                <span>Total (CAD)</span>
+                                <span id="summary-total">$0.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="modal">
+        <div class="modal-content success-content">
+            <div class="success-icon-wrapper">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h2>Order Placed Successfully!</h2>
+            <p class="order-number-text">Order Ref: <span id="success-ref">#RL-49281</span></p>
+            <p>Thank you for supporting **REDLINE Collective**! Your order has been registered in our simulation database. We'll send a simulated confirmation receipt to <strong id="success-email">john@example.com</strong> shortly.</p>
+            <p class="redirect-notice">Every shirt and decal counts toward keeping Medicine Hat's car culture alive and accessible!</p>
+            <button id="success-close-btn" class="btn btn-primary btn-glow">Continue Exploring</button>
+        </div>
+    </div>
+
+    <!-- JS Scripts -->
+    <script src="app.js"></script>
+</body>
+</html>
