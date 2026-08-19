@@ -298,10 +298,10 @@ ul {
 }
 
 .brand-logo-img {
-    width: 125px;
-    height: 125px;
-    padding-left: 12px;
-    margin-bottom: 4px;
+    width: 75px;
+    height: 75px;
+    padding-left: 18px;
+    margin-bottom: 8px;
 
 }
 
@@ -1937,8 +1937,8 @@ ul {
     }
 
     .brand-logo-img {
-        width: 15px;
-        height: 15px;
+        width: 5px;
+        height: 5px;
         padding-left: 0.3px;
         margin-bottom: 1.5px;
     }
