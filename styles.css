@@ -756,6 +756,7 @@ ul {
 .about-visual {
     display: flex;
     justify-content: center;
+    cursor: pointer;
 }
 
 .visual-card {
