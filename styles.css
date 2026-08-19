@@ -300,7 +300,7 @@ ul {
 .brand-logo-img {
     width: 125px;
     height: 125px;
-    padding-left: 7px;
+    padding-left: 12px;
     margin-bottom: 4px;
 
 }
@@ -1935,4 +1935,12 @@ ul {
     .footer-grid {
         grid-template-columns: 1fr;
     }
+
+    .brand-logo-img {
+        width: 50px;
+        height: 50px;
+        padding-left: 0px;
+        margin-bottom: 0px;
+    }
+
 }
