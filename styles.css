@@ -298,8 +298,11 @@ ul {
 }
 
 .brand-logo-img {
-    width: 85px;
-    height: 85px;
+    width: 125px;
+    height: 125px;
+    padding-left: 7px;
+    margin-bottom: 4px;
+
 }
 
 
