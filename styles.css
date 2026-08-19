@@ -8,31 +8,31 @@
     --bg-secondary: #121215;
     --bg-tertiary: #1b1b22;
     --bg-glass: rgba(10, 10, 12, 0.75);
-    
+
     --accent-red: #ff3b30;
     --accent-red-hover: #ef4444;
     --accent-red-glow: rgba(255, 59, 48, 0.4);
     --accent-red-glow-strong: rgba(255, 59, 48, 0.65);
-    
+
     --text-primary: #f4f4f5;
     --text-muted: #a1a1aa;
     --text-dark: #09090b;
-    
+
     --border-color: #27272a;
     --border-focus: #3f3f46;
-    
+
     --font-heading: 'Orbitron', sans-serif;
     --font-body: 'Inter', sans-serif;
-    
+
     --transition-fast: 0.2s ease;
     --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    
+
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.5);
     --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.7);
     --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.85);
     --shadow-glow: 0 0 15px var(--accent-red-glow);
-    
+
     --header-height: 80px;
     --border-radius-sm: 4px;
     --border-radius-md: 8px;
@@ -40,7 +40,9 @@
 }
 
 /* 2. Reset & Base Setup */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -64,19 +66,27 @@ body {
 ::-webkit-scrollbar {
     width: 8px;
 }
+
 ::-webkit-scrollbar-track {
     background: var(--bg-primary);
 }
+
 ::-webkit-scrollbar-thumb {
     background: var(--border-color);
     border-radius: var(--border-radius-sm);
 }
+
 ::-webkit-scrollbar-thumb:hover {
     background: var(--accent-red);
 }
 
 /* Typography elements */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--font-heading);
     font-weight: 800;
     letter-spacing: 0.05em;
@@ -95,7 +105,10 @@ img {
     display: block;
 }
 
-button, input, select, textarea {
+button,
+input,
+select,
+textarea {
     font-family: inherit;
     color: inherit;
     background: none;
@@ -284,6 +297,12 @@ ul {
     box-shadow: var(--shadow-sm);
 }
 
+.brand-logo-img {
+    width: 85px;
+    height: 85px;
+}
+
+
 .nav-container {
     height: 100%;
     display: flex;
@@ -338,11 +357,13 @@ ul {
     transition: var(--transition-normal);
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover,
+.nav-link.active {
     color: var(--text-primary);
 }
 
-.nav-link:hover::after, .nav-link.active::after {
+.nav-link:hover::after,
+.nav-link.active::after {
     width: 100%;
 }
 
@@ -462,12 +483,10 @@ ul {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        to bottom,
-        rgba(10, 10, 12, 0.4) 0%,
-        rgba(10, 10, 12, 0.85) 75%,
-        rgba(10, 10, 12, 1) 100%
-    );
+    background: linear-gradient(to bottom,
+            rgba(10, 10, 12, 0.4) 0%,
+            rgba(10, 10, 12, 0.85) 75%,
+            rgba(10, 10, 12, 1) 100%);
     z-index: 1;
 }
 
@@ -542,9 +561,22 @@ ul {
 
 /* Animations */
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% { transform: translate(-50%, 0); }
-    40% { transform: translate(-50%, -15px); }
-    60% { transform: translate(-50%, -7px); }
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translate(-50%, 0);
+    }
+
+    40% {
+        transform: translate(-50%, -15px);
+    }
+
+    60% {
+        transform: translate(-50%, -7px);
+    }
 }
 
 .animate-pop-in {
@@ -556,13 +588,27 @@ ul {
 }
 
 @keyframes popIn {
-    0% { transform: scale(0.9); opacity: 0; }
-    100% { transform: scale(1); opacity: 1; }
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 @keyframes fadeInUp {
-    0% { transform: translateY(30px); opacity: 0; }
-    100% { transform: translateY(0); opacity: 1; }
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 /* Glitch Effect */
@@ -596,20 +642,51 @@ ul {
 }
 
 @keyframes glitch-anim {
-    0% { clip: rect(15px, 9999px, 66px, 0); }
-    20% { clip: rect(32px, 9999px, 88px, 0); }
-    40% { clip: rect(74px, 9999px, 12px, 0); }
-    60% { clip: rect(5px, 9999px, 98px, 0); }
-    80% { clip: rect(93px, 9999px, 44px, 0); }
-    100% { clip: rect(11px, 9999px, 55px, 0); }
+    0% {
+        clip: rect(15px, 9999px, 66px, 0);
+    }
+
+    20% {
+        clip: rect(32px, 9999px, 88px, 0);
+    }
+
+    40% {
+        clip: rect(74px, 9999px, 12px, 0);
+    }
+
+    60% {
+        clip: rect(5px, 9999px, 98px, 0);
+    }
+
+    80% {
+        clip: rect(93px, 9999px, 44px, 0);
+    }
+
+    100% {
+        clip: rect(11px, 9999px, 55px, 0);
+    }
 }
 
 @keyframes glitch-anim2 {
-    0% { clip: rect(76px, 9999px, 116px, 0); }
-    25% { clip: rect(2px, 9999px, 42px, 0); }
-    50% { clip: rect(99px, 9999px, 149px, 0); }
-    75% { clip: rect(33px, 9999px, 83px, 0); }
-    100% { clip: rect(61px, 9999px, 121px, 0); }
+    0% {
+        clip: rect(76px, 9999px, 116px, 0);
+    }
+
+    25% {
+        clip: rect(2px, 9999px, 42px, 0);
+    }
+
+    50% {
+        clip: rect(99px, 9999px, 149px, 0);
+    }
+
+    75% {
+        clip: rect(33px, 9999px, 83px, 0);
+    }
+
+    100% {
+        clip: rect(61px, 9999px, 121px, 0);
+    }
 }
 
 
@@ -1169,8 +1246,8 @@ ul {
     letter-spacing: 0.05em;
 }
 
-.theme-form input, 
-.theme-form select, 
+.theme-form input,
+.theme-form select,
 .theme-form textarea {
     padding: 12px 16px;
     background-color: var(--bg-secondary);
@@ -1181,8 +1258,8 @@ ul {
     transition: var(--transition-fast);
 }
 
-.theme-form input:focus, 
-.theme-form select:focus, 
+.theme-form input:focus,
+.theme-form select:focus,
 .theme-form textarea:focus {
     border-color: var(--accent-red);
     box-shadow: 0 0 10px rgba(255, 59, 48, 0.15);
@@ -1448,8 +1525,13 @@ ul {
 }
 
 @keyframes modalSlideUp {
-    0% { transform: translateY(40px); }
-    100% { transform: translateY(0); }
+    0% {
+        transform: translateY(40px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 .modal-close {
@@ -1608,10 +1690,25 @@ ul {
 }
 
 @keyframes bounceIn {
-    0% { transform: scale(0.3); opacity: 0; }
-    50% { transform: scale(1.05); opacity: 0.8; }
-    70% { transform: scale(0.9); opacity: 0.9; }
-    100% { transform: scale(1); opacity: 1; }
+    0% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+
+    70% {
+        transform: scale(0.9);
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .success-content h2 {
@@ -1691,7 +1788,8 @@ ul {
     transform: translateY(-2px);
 }
 
-.footer-links h4, .footer-meta h4 {
+.footer-links h4,
+.footer-meta h4 {
     font-size: 0.9rem;
     text-transform: uppercase;
     margin-bottom: 25px;
@@ -1741,16 +1839,16 @@ ul {
         grid-template-columns: 1fr;
         gap: 50px;
     }
-    
+
     .about-visual {
         justify-content: flex-start;
     }
-    
+
     .contact-layout {
         grid-template-columns: 1fr;
         gap: 50px;
     }
-    
+
     .footer-grid {
         grid-template-columns: 1fr 1fr;
         gap: 40px;
@@ -1761,51 +1859,52 @@ ul {
     :root {
         --header-height: 70px;
     }
-    
+
     .section-padding {
         padding: 70px 0;
     }
-    
+
     #navbar {
         display: none;
     }
-    
+
     #mobile-menu-btn {
         display: flex;
     }
-    
+
     .hero-title {
         font-size: 2.8rem;
     }
-    
+
     .hero-subtitle {
         font-size: 1rem;
     }
-    
+
     .hero-cta {
         flex-direction: column;
         width: 100%;
         max-width: 320px;
     }
-    
+
     .form-row {
         grid-template-columns: 1fr;
         gap: 0;
     }
-    
+
     .checkout-split {
         grid-template-columns: 1fr;
         gap: 30px;
     }
-    
+
     .modal-content {
         max-height: 95vh;
     }
-    
-    .modal-header, .modal-body {
+
+    .modal-header,
+    .modal-body {
         padding: 20px;
     }
-    
+
     .bottom-bar {
         flex-direction: column;
         gap: 10px;
@@ -1817,19 +1916,19 @@ ul {
     .hero-title {
         font-size: 2.2rem;
     }
-    
+
     .section-title {
         font-size: 1.75rem;
     }
-    
+
     .visual-card {
         padding: 30px;
     }
-    
+
     .theme-form {
         padding: 24px;
     }
-    
+
     .footer-grid {
         grid-template-columns: 1fr;
     }
