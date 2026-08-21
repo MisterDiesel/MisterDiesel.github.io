@@ -685,8 +685,8 @@
             <div class="footer-links">
                 <h4>Support & Policies</h4>
                 <ul>
-                    <li><a href="#store">Shipping & Delivery</a></li>
-                    <li><a href="#store">Returns & Exchanges</a></li>
+                    <li><a href="#" id="shipping-link">Shipping & Delivery</a></li>
+                    <li><a href="#" id="returns-link">Returns & Exchanges</a></li>
                     <li><a href="#contact">Mailing List</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -856,6 +856,48 @@
             <p class="redirect-notice">Every shirt and decal counts toward keeping Medicine Hat's car culture alive and
                 accessible!</p>
             <button id="success-close-btn" class="btn btn-primary btn-glow">Continue Exploring</button>
+        </div>
+    </div>
+
+    <!-- Shipping & Delivery Modal -->
+    <div id="shipping-modal" class="modal" role="dialog" aria-labelledby="shipping-modal-title" aria-modal="true">
+        <div class="modal-content policy-content">
+            <button id="shipping-close-btn" class="modal-close" aria-label="Close shipping policy"><i
+                    class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header">
+                <h2 id="shipping-modal-title">Shipping & Delivery</h2>
+                <p>REDLINE Collective merch policy</p>
+            </div>
+            <div class="modal-body">
+                <p>We offer local, provincial, and national (at extra cost of the buyer) shipping for our customers.
+                    Customer orders are processed and shipped within 1-2 weeks of order placement.
+
+                    Our company also offers local pickup for our customers. You can pick up your order at Eight 33 productions here in Medicine Hat, Alberta, Canada.
+                    All orders are eligible for either type of delivery, your email will contain all information needed regarding your order and delivery/pick-up.
+                </p>
+                <button id="shipping-ok-btn" class="btn btn-primary btn-glow">Understood!</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Returns & Exchanges Modal -->
+    <div id="returns-modal" class="modal" role="dialog" aria-labelledby="returns-modal-title" aria-modal="true">
+        <div class="modal-content policy-content">
+            <button id="returns-close-btn" class="modal-close" aria-label="Close returns policy"><i
+                    class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header">
+                <h2 id="returns-modal-title">Returns & Exchanges</h2>
+                <p>REDLINE Collective merch policy</p>
+            </div>
+            <div class="modal-body">
+                <p>1. Unworn, or otherwise unused items can be returned or exchanged within 14 days of delivery/pick-up. Any apparel that has been worn, washed or altered in any way is non refundable.
+                    Contact us with your order details and we’ll help you sort it out.
+                </p>
+                <p>2. Incorrectly shipped items can be returned or exchanged at any time within 14 days of delivery/pick-up. If you receive an item that is damaged, incorrect, or missing parts, please contact us immediately. Making you eligible for a full refund or exchange.</p>
+                <p>3. Any item that is damaged or defective upon arrival follows the same return/exchange policy as stated above.</p>
+            
+                <button id="returns-ok-btn" class="btn btn-primary btn-glow">Understood!</button>
+            </div>
         </div>
     </div>
 

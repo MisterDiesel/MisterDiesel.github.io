@@ -55,6 +55,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // Contact/Join Form
     const joinForm = document.getElementById('join-form');
 
+    // Policy Modals
+    const shippingLink = document.getElementById('shipping-link');
+    const shippingModal = document.getElementById('shipping-modal');
+    const shippingCloseBtn = document.getElementById('shipping-close-btn');
+    const shippingOkBtn = document.getElementById('shipping-ok-btn');
+    const returnsLink = document.getElementById('returns-link');
+    const returnsModal = document.getElementById('returns-modal');
+    const returnsCloseBtn = document.getElementById('returns-close-btn');
+    const returnsOkBtn = document.getElementById('returns-ok-btn');
+
     // ==========================================
     // 3. SCROLL PROGRESS & HEADER STYLING
     // ==========================================
@@ -409,6 +419,45 @@ document.addEventListener('DOMContentLoaded', () => {
     successCloseBtn.addEventListener('click', () => {
         successModal.classList.remove('open');
         document.body.style.overflow = '';
+    });
+
+    // ==========================================
+    // 10b. POLICY MODALS (SHIPPING & RETURNS)
+    // ==========================================
+    const openPolicyModal = (modal) => {
+        modal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closePolicyModal = (modal) => {
+        modal.classList.remove('open');
+        document.body.style.overflow = '';
+    };
+
+    shippingLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        openPolicyModal(shippingModal);
+    });
+    shippingCloseBtn.addEventListener('click', () => closePolicyModal(shippingModal));
+    shippingOkBtn.addEventListener('click', () => closePolicyModal(shippingModal));
+    shippingModal.addEventListener('click', (e) => {
+        if (e.target === shippingModal) closePolicyModal(shippingModal);
+    });
+
+    returnsLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        openPolicyModal(returnsModal);
+    });
+    returnsCloseBtn.addEventListener('click', () => closePolicyModal(returnsModal));
+    returnsOkBtn.addEventListener('click', () => closePolicyModal(returnsModal));
+    returnsModal.addEventListener('click', (e) => {
+        if (e.target === returnsModal) closePolicyModal(returnsModal);
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key !== 'Escape') return;
+        if (shippingModal.classList.contains('open')) closePolicyModal(shippingModal);
+        if (returnsModal.classList.contains('open')) closePolicyModal(returnsModal);
     });
 
     // ==========================================

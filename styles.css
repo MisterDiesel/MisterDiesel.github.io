@@ -1744,6 +1744,21 @@ ul {
     margin-top: 20px !important;
 }
 
+.policy-content {
+    max-width: 480px;
+}
+
+.policy-content .modal-body p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+.policy-content .btn {
+    margin-top: 8px;
+}
+
 /* 13. Footer Styling */
 #main-footer {
     background-color: #050507;
